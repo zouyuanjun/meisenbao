@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cim_shopicon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:text="TextView"
+        android:textColor="@color/font333"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/cim_shopicon"
+        app:layout_constraintTop_toTopOf="@+id/cim_shopicon" />
+
+    <TextView
+        android:id="@+id/tv_shop_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textColor="@color/font999"
+        android:textSize="10sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toStartOf="@+id/bt_pay"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_shop_name" />
+
+    <Button
+        android:id="@+id/bt_pay"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_corners_5"
+        android:text="买单"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="@color/font06a"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="距离未知"
+        android:textSize="10sp"
+        android:textColor="@color/font999"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_shop_name"
+        app:layout_constraintStart_toEndOf="@+id/tv_shop_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_shop_name" />
+</android.support.constraint.ConstraintLayout>

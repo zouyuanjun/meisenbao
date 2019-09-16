@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:title="我的账户" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_corners_12"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:text="头像"
+                android:layout_weight="1"
+                android:textColor="@color/font333"
+                android:textSize="16sp" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="16dp"
+                />
+        </LinearLayout>
+
+        <com.jxtk.mspay.utils.BGLinearlayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+          >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:text="昵称"
+                android:textColor="@color/font333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_nicknema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="16dp"
+                android:text=""
+                android:textColor="@color/font999"
+                android:textSize="16sp" />
+        </com.jxtk.mspay.utils.BGLinearlayout>
+
+        <com.jxtk.mspay.utils.BGLinearlayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+      >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:text="性别"
+                android:textColor="@color/font333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="16dp"
+                android:text="男"
+                android:textColor="@color/font999"
+                android:textSize="16sp" />
+        </com.jxtk.mspay.utils.BGLinearlayout>
+
+        <com.jxtk.mspay.utils.BGLinearlayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+        >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:text="手机"
+                android:textColor="@color/font333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_phonenumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="16dp"
+                android:text=""
+                android:textColor="@color/font999"
+                android:textSize="16sp" />
+        </com.jxtk.mspay.utils.BGLinearlayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_updateinfo"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:text="修改个人资料"
+        android:textColor="#06a8fb" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_corners_12"
+        android:orientation="vertical">
+
+        <com.jxtk.mspay.utils.BGLinearlayout
+            android:id="@+id/tv_invoice"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+         >
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="我的发票抬头"
+                android:textColor="@color/font333"
+                android:textSize="16sp" />
+
+            <ImageView
+                style="@style/Settingnext"
+                android:layout_marginRight="16dp"
+                />
+        </com.jxtk.mspay.utils.BGLinearlayout>
+
+        <com.jxtk.mspay.utils.BGLinearlayout
+            android:id="@+id/tv_myaddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+         >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="我的收件地址"
+                android:textColor="@color/font333"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                style="@style/Settingnext"
+                android:layout_marginRight="16dp"/>
+        </com.jxtk.mspay.utils.BGLinearlayout>
+        <com.jxtk.mspay.utils.BGLinearlayout
+            android:id="@+id/bg_mybank"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="12dp"
+          >
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="我的银行卡"
+                android:textColor="@color/font333"
+                android:textSize="16sp" />
+            <ImageView
+                style="@style/Settingnext"
+                android:layout_marginRight="16dp"/>
+        </com.jxtk.mspay.utils.BGLinearlayout>
+    </LinearLayout>
+
+</LinearLayout>

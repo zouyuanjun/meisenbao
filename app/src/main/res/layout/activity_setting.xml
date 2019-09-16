@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:title="设置" />
+
+    <com.jxtk.mspay.utils.BGLinearlayout
+        android:id="@+id/bg_update_pay_password"
+        style="@style/BGlinelayout">
+
+        <TextView
+            style="@style/SettingText"
+            android:text="修改支付密码" />
+
+        <ImageView style="@style/Settingnext" />
+    </com.jxtk.mspay.utils.BGLinearlayout>
+
+    <com.jxtk.mspay.utils.BGLinearlayout
+        android:id="@+id/bg_update_login_password"
+        style="@style/BGlinelayout">
+
+        <TextView
+            style="@style/SettingText"
+            android:text="修改登录密码" />
+
+        <ImageView style="@style/Settingnext" />
+    </com.jxtk.mspay.utils.BGLinearlayout>
+
+    <com.jxtk.mspay.utils.BGLinearlayout
+        android:id="@+id/ll_fignerpay"
+        style="@style/BGlinelayout">
+
+        <TextView
+            style="@style/SettingText"
+            android:text="打开指纹支付" />
+
+        <com.zou.fastlibrary.widget.SwitchButton
+            android:id="@+id/sb_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp" />
+    </com.jxtk.mspay.utils.BGLinearlayout>
+
+    <com.jxtk.mspay.utils.BGLinearlayout
+        android:id="@+id/bg_serverrule"
+        style="@style/BGlinelayout">
+
+        <TextView
+            style="@style/SettingText"
+            android:text="服务条款" />
+
+        <ImageView style="@style/Settingnext" />
+    </com.jxtk.mspay.utils.BGLinearlayout>
+
+    <com.jxtk.mspay.utils.BGLinearlayout
+        android:id="@+id/bg_about"
+        style="@style/BGlinelayout">
+
+        <TextView
+            style="@style/SettingText"
+            android:text="关于我们" />
+
+        <ImageView style="@style/Settingnext" />
+    </com.jxtk.mspay.utils.BGLinearlayout>
+
+    <com.jxtk.mspay.utils.BGLinearlayout style="@style/BGlinelayout">
+
+        <TextView
+            style="@style/SettingText"
+            android:text="打开深色主题" />
+
+        <com.zou.fastlibrary.widget.SwitchButton
+            android:id="@+id/sb_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp" />
+    </com.jxtk.mspay.utils.BGLinearlayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/bt_loginout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/contact_bg"
+        android:text="退出登录"
+        android:gravity="center"
+        android:textColor="@color/font06a" />
+</LinearLayout>

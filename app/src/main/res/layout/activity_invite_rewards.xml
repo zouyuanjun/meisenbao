@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rightColor="@color/font06a"
+        app:rightTitle="奖励细则"
+        app:title="我的奖励" />
+
+    <com.zou.fastlibrary.widget.SettingBar
+        android:id="@+id/sb_invitenum"
+        android:layout_margin="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:bar_leftText="邀请用户数"
+        app:bar_lineVisible="false"
+        app:bar_rightColor="@color/font06a"
+        app:bar_rightText="0"
+        app:bar_rightSize="18sp"
+        app:bar_leftSize="18sp"/>
+
+    <com.zou.fastlibrary.widget.SettingBar
+        android:id="@+id/sb_reward_point"
+        android:layout_margin="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:bar_leftText="基础奖励"
+        app:bar_lineVisible="false"
+        app:bar_rightColor="@color/font06a"
+        app:bar_rightText="0积分"
+        app:bar_rightSize="18sp"
+        app:bar_leftSize="18sp"/>
+    <com.zou.fastlibrary.widget.SettingBar
+
+        android:layout_margin="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:bar_leftText="邀请用户"
+        app:bar_lineVisible="false"
+        app:bar_leftColor="@color/font999"
+        app:bar_rightColor="@color/font999"
+        app:bar_rightText="手机号码"
+        app:bar_rightSize="12sp"
+        app:bar_leftSize="12sp"/>
+    <android.support.v7.widget.RecyclerView
+        android:background="@drawable/shape_corners_12"
+        android:id="@+id/recyclerview"
+        android:padding="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_margin="30dp"
+        android:id="@+id/tv_rule"
+        android:text="奖励规则"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

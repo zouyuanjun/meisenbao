@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:title="提现" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/font999"
+        android:textSize="12sp"
+        android:text="提现金额须为整百，100元起提"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        />
+    <TextView
+        android:id="@+id/tv_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/font333"
+        android:text="提现金额须为整百，100元起提"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:layout_marginLeft="16dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/font666"
+        android:textSize="12sp"
+        android:text="银行卡"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        />
+    <LinearLayout
+        android:id="@+id/ll_bank"
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/icon_add_blue"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加银行卡"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/font06a"/>
+    </LinearLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="345dp"
+        android:layout_height="105dp"
+        android:layout_margin="16dp"
+
+        android:layout_gravity="center_horizontal"
+       >
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="****   ****  *****"
+            android:textColor="@color/font06a"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cardnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="0752"
+            android:textColor="@color/font06a"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/textView21"
+            app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/tv_bankname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="中国工商银行"
+            android:textColor="@color/font333"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="64dp"
+            android:text="TextView"
+            android:textColor="@color/font333"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cardnumber" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/right_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <com.jxtk.mspay.utils.BGLinearlayout
+        android:layout_width="match_parent"
+        app:bgdividecolor="@color/divline"
+        app:bgdividesize="1dp"
+        android:gravity="center_vertical"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font333"
+            android:text="提现金额"
+            android:textSize="15sp"
+            android:layout_marginLeft="16dp"
+            />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="15dp"
+            android:background="@drawable/icon_money_darkgray"
+            android:layout_marginLeft="40dp"/>
+        <EditText
+            android:id="@+id/ed_tixianmoney"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:textSize="15sp"
+            android:inputType="number"
+            android:hint="请输入提现金额"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/font333"/>
+    </com.jxtk.mspay.utils.BGLinearlayout>
+
+    <TextView
+        android:id="@+id/tv_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手续费率：8%"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/bt_confirm"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        style="@style/ButtonStyle"
+        android:enabled="false"
+        android:textColor="@color/white"
+        android:text="确定"
+        android:layout_marginTop="30dp"
+        />
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 禁用状态 -->
+    <item android:state_enabled="false"
+        android:drawable="@drawable/iconext_grey">
+    </item>
+    <item android:state_enabled="true"
+        android:drawable="@drawable/iconnnext_blue">
+    </item>
+    <!-- 按压状态 -->
+    <item android:state_pressed="true"
+        android:drawable="@drawable/iconnnext_blue">
+    </item>
+
+    <!-- 焦点状态 -->
+    <item android:state_focused="true"
+        android:drawable="@drawable/iconnnext_blue">
+        >
+    </item>
+
+    <!-- 默认状态 -->
+    <item
+        android:drawable="@drawable/iconext_grey">
+
+    </item>
+
+</selector>

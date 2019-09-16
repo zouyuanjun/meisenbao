@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:title="我的收件地址"
+        app:rightTitle="添加" />
+   <LinearLayout
+       android:id="@+id/linearLayout"
+
+       android:layout_margin="16dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:background="@drawable/shape_corners_12">
+       <com.zou.fastlibrary.widget.SettingBar
+           android:id="@+id/sb_name"
+           android:layout_width="match_parent"
+           app:bar_leftText="收件人"
+           app:bar_lineVisible="false"
+           app:bar_leftColor="@color/font666"
+           app:bar_rightColor="@color/font333"
+           android:layout_height="wrap_content">
+
+       </com.zou.fastlibrary.widget.SettingBar>
+       <com.zou.fastlibrary.widget.SettingBar
+           android:id="@+id/sb_phonenum"
+           android:layout_width="match_parent"
+           app:bar_leftText="手机号码"
+           app:bar_leftColor="@color/font666"
+           app:bar_rightColor="@color/font333"
+           app:bar_lineVisible="false"
+           android:layout_height="wrap_content">
+       </com.zou.fastlibrary.widget.SettingBar>
+       <com.zou.fastlibrary.widget.SettingBar
+           android:id="@+id/sb_address"
+           android:layout_width="match_parent"
+           app:bar_leftText="收件地址"
+           android:layout_marginRight="5dp"
+           app:bar_leftColor="@color/font666"
+           app:bar_lineVisible="false"
+           app:bar_rightColor="@color/font333"
+           android:layout_height="wrap_content">
+
+       </com.zou.fastlibrary.widget.SettingBar>
+   </LinearLayout>
+</LinearLayout>

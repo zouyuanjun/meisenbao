@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.jxtk.mspay.utils.BGLinearlayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    app:showTopDiv="false"
+    app:bgdividecolor="@color/divline"
+    app:bgdividesize="0.5dp"
+    app:bgdividePaddingLeft="32dp"
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/tv_help_title"
+        android:textColor="@color/font333"
+        android:layout_weight="1"
+        android:textSize="14sp"
+        android:layout_marginLeft="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="常见问题"/>
+    <ImageView
+        android:layout_width="7dp"
+        android:layout_height="12dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/right_next"/>
+</com.jxtk.mspay.utils.BGLinearlayout>

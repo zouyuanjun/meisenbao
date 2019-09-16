@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+
+    >
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintlayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/card_normal">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout_bar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="92dp"
+                android:background="@drawable/card_bar_normal"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="0dp">
+
+                <TextView
+                    android:id="@+id/tv_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="44dp"
+                    android:text="等级"
+                    android:textColor="@color/setting_normal_font"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_nicknema" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circleImageView"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_nicknema"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text=""
+                    android:textColor="@color/setting_normal_font"
+                    app:layout_constraintStart_toEndOf="@+id/circleImageView"
+                    app:layout_constraintTop_toTopOf="@+id/circleImageView" />
+
+                <TextView
+                    android:id="@+id/tv_phonenumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text=""
+                    android:textColor="@color/setting_normal_font"
+                    app:layout_constraintStart_toStartOf="@+id/tv_nicknema"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nicknema" />
+
+                <TextView
+                    android:id="@+id/tv_integral_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="积分:20"
+                    android:textColor="@color/setting_normal_font"
+                    app:layout_constraintStart_toStartOf="@+id/tv_level"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_level" />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="6dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/icon_card_arrow_brownforgold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_integral_num"
+                    app:layout_constraintStart_toEndOf="@+id/tv_integral_num"
+                    app:layout_constraintTop_toTopOf="@+id/tv_integral_num" />
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="6dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/icon_card_arrow_brownforgold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_phonenumber"
+                    app:layout_constraintStart_toEndOf="@+id/tv_phonenumber"
+                    app:layout_constraintTop_toTopOf="@+id/tv_phonenumber" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_vip"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="horizontal"
+                        tools:layout_editor_absoluteX="21dp"
+                        tools:layout_editor_absoluteY="6dp">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/im_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/icon_card_money_navyfornormal"
+                app:layout_constraintBottom_toBottomOf="@+id/textView11"
+                app:layout_constraintEnd_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:text="M币"
+                android:textColor="@color/setting_normal_font"
+                android:textSize="26sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="28dp"
+                android:text="00.00"
+                android:textColor="@color/setting_normal_font"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/tv_validity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="为您保级至"
+                android:textColor="@color/setting_normal_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout_bar" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.jxtk.mspay.utils.BGLinearlayout
+                android:id="@+id/bg_message"
+                style="@style/BGlinelayout"
+                >
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_corners_5">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/icon_my_notification" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:text="消息"
+                    android:textColor="@color/font2f"
+                    android:textSize="16sp" />
+
+                <com.zou.fastlibrary.widget.ShapeCornerBgView
+                    android:id="@+id/scb_messagenum"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    app:appRadius="16dp" />
+
+                <ImageView style="@style/Settingnext" />
+            </com.jxtk.mspay.utils.BGLinearlayout>
+
+            <com.jxtk.mspay.utils.BGLinearlayout
+                android:id="@+id/bg_bill"
+                style="@style/BGlinelayout">
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_corners_5">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/icon_my_bill" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:text="账单"
+                    android:textColor="@color/font2f"
+                    android:textSize="16sp" />
+
+                <ImageView style="@style/Settingnext" />
+            </com.jxtk.mspay.utils.BGLinearlayout>
+
+            <com.jxtk.mspay.utils.BGLinearlayout
+                android:id="@+id/bg_invoice"
+                style="@style/BGlinelayout">
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_corners_5">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/icon_my_invoice" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:text="发票"
+                    android:textColor="@color/font2f"
+                    android:textSize="16sp" />
+
+                <ImageView style="@style/Settingnext" />
+            </com.jxtk.mspay.utils.BGLinearlayout>
+
+            <com.jxtk.mspay.utils.BGLinearlayout
+                android:id="@+id/bg_task"
+                style="@style/BGlinelayout">
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_corners_5">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/icon_my_task" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:text="任务中心"
+                    android:textColor="@color/font2f"
+                    android:textSize="16sp" />
+
+                <ImageView style="@style/Settingnext" />
+            </com.jxtk.mspay.utils.BGLinearlayout>
+
+
+
+            <com.jxtk.mspay.utils.BGLinearlayout
+                android:id="@+id/bg_help"
+                style="@style/BGlinelayout">
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_corners_5">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/icon_my_help" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:text="帮助中心"
+                    android:textColor="@color/font2f"
+                    android:textSize="16sp" />
+                <ImageView style="@style/Settingnext" />
+            </com.jxtk.mspay.utils.BGLinearlayout>
+            <com.jxtk.mspay.utils.BGLinearlayout
+                android:id="@+id/bg_invite"
+                style="@style/BGlinelayout">
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_corners_5">
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/icon_my_invitation" />
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:text="邀请有礼"
+                    android:textColor="@color/font2f"
+                    android:textSize="16sp" />
+
+                <ImageView style="@style/Settingnext" />
+            </com.jxtk.mspay.utils.BGLinearlayout>
+            <com.jxtk.mspay.utils.BGLinearlayout
+                android:id="@+id/bg_setting"
+                style="@style/BGlinelayout">
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_corners_5">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/icon_my_setting" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:text="设置"
+                    android:textColor="@color/font2f"
+                    android:textSize="16sp" />
+
+                <ImageView style="@style/Settingnext" />
+            </com.jxtk.mspay.utils.BGLinearlayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
+
+
+

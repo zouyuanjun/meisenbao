@@ -1,0 +1,9 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="home_adimage_w">160dp</dimen>
+    <dimen name="home_adimage_h">103dp</dimen>
+    <dimen name="setting_height">60dp</dimen>
+    <dimen name="home_ad_radius">6dp</dimen>
+</resources>

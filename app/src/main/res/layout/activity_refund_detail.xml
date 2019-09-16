@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:title="退款详情" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/im_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_shopname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            android:text=" 梅尔森卢卡斯加拉"
+            android:textColor="@color/font333"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_paynumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:text=" 600"
+        android:textColor="@color/font333"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tv_statu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="交易成功"
+        android:textColor="@color/font999"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/shape_corners_12"
+        android:orientation="vertical">
+
+        <com.zou.fastlibrary.widget.SettingBar
+            android:id="@+id/sb_ordernumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bar_leftColor="@color/font999"
+            app:bar_leftSize="15sp"
+            app:bar_leftText="订单号"
+            app:bar_lineVisible="false"
+            app:bar_rightColor="@color/font333"
+            app:bar_rightSize="15sp" />
+        <com.zou.fastlibrary.widget.SettingBar
+            android:id="@+id/sb_creattime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bar_leftColor="@color/font999"
+            app:bar_leftSize="15sp"
+            app:bar_leftText="创建时间"
+            app:bar_lineVisible="false"
+            app:bar_rightColor="@color/font333"
+            app:bar_rightSize="15sp" />
+
+        <com.zou.fastlibrary.widget.SettingBar
+            android:id="@+id/sv_ordernum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bar_leftColor="@color/font999"
+            app:bar_leftSize="15sp"
+            app:bar_leftText="订单金额"
+            app:bar_lineVisible="false"
+            app:bar_rightColor="@color/font333"
+            app:bar_rightSize="15sp" />
+
+
+        <com.zou.fastlibrary.widget.SettingBar
+            android:id="@+id/sb_refund_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bar_leftColor="@color/font999"
+            app:bar_leftSize="15sp"
+            app:bar_leftText="退款申请时间"
+            app:bar_lineVisible="false"
+            app:bar_rightColor="@color/font333"
+            app:bar_rightSize="15sp" />
+
+        <com.zou.fastlibrary.widget.SettingBar
+            android:id="@+id/sb_refund_time2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bar_leftColor="@color/font999"
+            app:bar_leftSize="15sp"
+            app:bar_leftText="退款到账时间"
+            app:bar_lineVisible="false"
+            app:bar_rightColor="@color/font333"
+            app:bar_rightSize="15sp" />
+
+        <com.zou.fastlibrary.widget.SettingBar
+            android:id="@+id/sb_refund_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bar_leftColor="@color/font999"
+            app:bar_leftSize="15sp"
+            app:bar_leftText="退款原因"
+            app:bar_lineVisible="false"
+            app:bar_rightColor="@color/font333"
+            app:bar_rightSize="15sp" />
+        <com.zou.fastlibrary.widget.SettingBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bar_leftColor="@color/font999"
+            app:bar_leftSize="15sp"
+            app:bar_leftText="退还方式"
+            app:bar_rightText="原路退回"
+            app:bar_lineVisible="false"
+            app:bar_rightColor="@color/font333"
+            app:bar_rightSize="15sp" />
+
+        <com.zou.fastlibrary.widget.SettingBar
+            android:id="@+id/sb_refund_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bar_leftColor="@color/font999"
+            app:bar_leftSize="15sp"
+            app:bar_leftText="已退金额"
+            app:bar_lineVisible="false"
+            app:bar_rightColor="@color/font333"
+            app:bar_rightSize="15sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

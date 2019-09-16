@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#4f9dff</color>
+    <color name="textbg">#f5f6fa</color>
+    <color name="font999">#999999</color>
+    <color name="font666">#666666</color>
+    <color name="font333">#2f3640</color>
+    <color name="divline">#dcdde1</color>
+    <color name="font2f">#2f3640</color>
+    <color name="font06a">#4f9dff</color>
+
+    <color name="font5b3">#5b3b04</color>
+    <color name="bg">#ffffff</color>
+    <color name="miconbg">#f5f6fa</color>
+    <color name="contact_bg">#f5f6fa</color>
+
+    <color name="multiple_image_select_primaryDark">#4f9dff</color>
+<color name="setting_normal_font">#04255b</color>
+</resources>

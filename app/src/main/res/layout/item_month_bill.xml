@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <com.jxtk.mspay.utils.BGLinearlayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        app:bgdividecolor="@color/divline"
+        app:bgdividesize="1dp">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="2019年7越"
+            android:textColor="@color/font333"
+            android:textSize="17sp"
+            tools:layout_editor_absoluteX="34dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="+"
+            android:textColor="@color/font666"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_money_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:drawableLeft="@drawable/icon_money_darkgray"
+            android:drawablePadding="5dp"
+            android:text="10000"
+            android:textColor="@color/font666"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="—"
+            android:textColor="@color/font666"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_money_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:drawableLeft="@drawable/icon_money_darkgray"
+            android:drawablePadding="5dp"
+            android:text="130.0"
+            android:textColor="@color/font666"
+            android:textSize="16sp" />
+    </com.jxtk.mspay.utils.BGLinearlayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

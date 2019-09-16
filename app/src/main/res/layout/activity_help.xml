@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:title="帮助中心" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="12dp"
+        android:text="常见问题"
+        android:textColor="@color/font333"
+        android:textSize="18sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="12dp"
+        android:text="帮助分类"
+        android:textColor="@color/font333"
+        android:textSize="18sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_server"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/contact_bg"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="14dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/icon_customer_service_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="联系客服"
+            android:textColor="#4f9dff"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+<TextView
+    android:id="@+id/tv_meaage_time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#7f8fa6"
+    android:text="201695455465"
+    android:textSize="14sp"
+    android:paddingLeft="16dp"
+    android:layout_margin="16dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_corners_12">
+        <TextView
+            android:id="@+id/tv_meaage_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font333"
+            android:text="201695455465"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:layout_margin="16dp"/>
+        <TextView
+            android:id="@+id/tv_message_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font666"
+            android:text="201695455465"
+            android:textSize="15sp"
+            android:maxLines="2"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+</LinearLayout>

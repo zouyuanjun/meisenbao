@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:title="手机短信验证" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="验证码将发送至手机"
+        android:textColor="@color/font333"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:textSize="14sp"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/shape_corners_12"
+        >
+
+        <TextView
+            android:id="@+id/tv_codeinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:text="验证码短信已发送"
+            android:textColor="@color/font333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.zou.fastlibrary.widget.CountdownView
+            android:id="@+id/sengcode"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:text="重新发送"
+            android:textColor="@color/font666"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_codeinfo" />
+
+        <com.zou.fastlibrary.widget.VerificationCodeView
+            android:id="@+id/verificationcodeview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_codeinfo"
+            app:vcv_et_bg="@color/white"
+            app:vcv_et_cursor="@drawable/et_cursor"
+            app:vcv_et_inputType="number"
+            app:vcv_et_number="4"
+            app:vcv_et_text_color="@android:color/black"
+            app:vcv_et_text_size="12sp"
+            app:vcv_et_width="40dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

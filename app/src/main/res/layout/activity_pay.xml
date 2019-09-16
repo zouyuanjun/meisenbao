@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:title="付款" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:id="@+id/im_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/tv_payname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textColor="@color/font333"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+    <com.jxtk.mspay.utils.BGLinearlayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:bgdividecolor="@color/divline"
+        app:bgdividesize="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="付款金额"
+            android:textColor="@color/font333"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/icon_card_money_navyfornormal" />
+
+        <EditText
+            android:id="@+id/ed_paynum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:background="@null"
+            android:hint="请输入付款金额"
+            android:inputType="numberDecimal"
+            android:textSize="15sp" />
+    </com.jxtk.mspay.utils.BGLinearlayout>
+
+    <TextView
+        android:id="@+id/tv_addremark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="26dp"
+        android:gravity="center"
+        android:text="添加备注"
+        android:textColor="@color/font06a" />
+
+    <LinearLayout
+        android:id="@+id/ll_remark"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_weight="1"
+            android:text="备注"
+            android:textColor="@color/font333"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tv_updataremark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="32dp"
+            android:gravity="center"
+            android:text="修改备注"
+            android:textColor="@color/font06a" />
+    </LinearLayout>
+<TextView
+    android:id="@+id/tv_remark"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxLines="7"
+    android:textColor="@color/font333"
+    android:textSize="14sp"
+    android:background="@drawable/shape_corners_12"
+    android:padding="16dp"
+    android:text=""
+    android:lineSpacingExtra="2dp"
+    android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/bt_confirm"
+        style="@style/ButtonStyle"
+        android:enabled="false"
+        android:text="确定付款" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <com.jay.easykeyboard.SystemKeyboard
+        android:id="@+id/Keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:xmlLayoutResId="@xml/keyboardnumber" />
+</LinearLayout>

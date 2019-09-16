@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_height="match_parent">
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:title="任务中心" />
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/sign_in"
+    android:layout_height="100dp">
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="19dp"
+        android:text="每日签到"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="4dp"
+        android:text="连续七天签到积分翻倍"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <Button
+        android:id="@+id/bt_signin"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="28dp"
+        android:text="立即签到"
+        android:textColor="@color/white"
+        android:background="@drawable/shork_corners_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_corners_12"
+        android:layout_margin="16dp"
+        android:layout_height="100dp">
+
+
+        <TextView
+            android:id="@+id/tv_tasktitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="每日签到"
+            android:textColor="@color/font333"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_point1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="连续七天签到积分翻倍"
+            android:textColor="@color/font06a"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_tasktitle1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tasktitle1" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/bt_goto"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/selector_button_5_task"
+            android:text="去完成"
+            android:textSize="12sp"
+            android:textColor="@color/font06a"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.611" />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_corners_12"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_height="100dp">
+
+
+        <TextView
+            android:id="@+id/tv_tasktitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="每日签到"
+            android:textColor="@color/font333"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_point2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="连续七天签到积分翻倍"
+            android:textColor="@color/font06a"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_tasktitle2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tasktitle2" />
+
+        <Button
+            android:textSize="12sp"
+            android:id="@+id/bt_goto2"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/selector_button_5_task"
+            android:text="去完成"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="@color/font06a"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.611" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

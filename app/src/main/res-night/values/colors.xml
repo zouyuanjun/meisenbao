@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="font999_night">#ffffff</color>
+    <color name="font666_night">#ffffff</color>
+    <color name="font333_night">#ffffff</color>
+    <color name="divline_night">#252b33</color>
+    <color name="bg_night">#2f3640</color>
+    <color name="font2f_night">#e5e5e5</color>
+    <color name="contact_bg_night">#252b33</color>
+</resources>

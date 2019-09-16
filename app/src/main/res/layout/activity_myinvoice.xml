@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:rightTitle="添加"
+
+        app:title="我的发票抬头" />
+    <com.zou.fastlibrary.widget.HintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_invoice_2"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/shape_corners_12">
+            <com.zou.fastlibrary.widget.SettingBar
+                android:id="@+id/sb_class"
+                android:layout_width="match_parent"
+                app:bar_leftText="开具类型"
+                app:bar_lineVisible="false"
+                app:bar_leftSize="14sp"
+                app:bar_rightSize="14sp"
+                app:bar_leftColor="@color/font666"
+                app:bar_rightColor="@color/font333"
+                android:layout_height="wrap_content">
+
+            </com.zou.fastlibrary.widget.SettingBar>
+            <com.zou.fastlibrary.widget.SettingBar
+                android:id="@+id/sb_title"
+                android:layout_width="match_parent"
+                app:bar_leftText="发票抬头"
+                app:bar_lineVisible="false"
+                app:bar_leftSize="14sp"
+                app:bar_rightSize="14sp"
+                app:bar_leftColor="@color/font666"
+                app:bar_rightColor="@color/font333"
+                android:layout_height="wrap_content">
+            </com.zou.fastlibrary.widget.SettingBar>
+            <com.zou.fastlibrary.widget.SettingBar
+                android:id="@+id/sb_sort"
+                android:layout_width="match_parent"
+                app:bar_leftText="发票类型"
+                app:bar_lineVisible="false"
+                app:bar_leftSize="14sp"
+                app:bar_rightSize="14sp"
+                app:bar_leftColor="@color/font666"
+                app:bar_rightColor="@color/font333"
+                android:layout_height="wrap_content">
+
+            </com.zou.fastlibrary.widget.SettingBar>
+            <com.zou.fastlibrary.widget.SettingBar
+                android:id="@+id/sb_number"
+                android:layout_width="match_parent"
+                app:bar_leftText="税务登记证号"
+                app:bar_lineVisible="false"
+                app:bar_leftSize="14sp"
+                app:bar_rightSize="14sp"
+                app:bar_leftColor="@color/font666"
+                app:bar_rightColor="@color/font333"
+                android:layout_height="wrap_content">
+
+            </com.zou.fastlibrary.widget.SettingBar>
+        </LinearLayout>
+
+    </com.zou.fastlibrary.widget.HintLayout>
+
+</LinearLayout>

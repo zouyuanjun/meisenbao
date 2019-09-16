@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_corners_12_1"
+    android:layout_margin="3dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_m"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="200"
+        android:drawableLeft="@drawable/icon_money_darkgray"
+        android:drawablePadding="5dp"
+        android:textColor="@color/font333"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_give"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:drawableLeft="@drawable/icon_money_gray"
+        android:drawablePadding="5dp"
+        android:text="0"
+        android:textColor="@color/font333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="200"
+        android:background="@drawable/shape_corners_hui12"
+        android:textColor="@color/font06a"
+        android:textSize="12sp" />
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_height="match_parent">
+
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:title="申请退款" />
+    <TextView
+        style="@style/TextLeft"
+        android:layout_marginLeft="32dp"
+        android:text="申请退款金额"/>
+    <TextView
+        android:id="@+id/tv_refundnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.00"
+        android:textColor="@color/font333"
+        android:textSize="30dp"
+        android:layout_gravity="center_horizontal"/>
+    <TextView
+        style="@style/TextLeft"
+        android:layout_marginLeft="32dp"
+        android:text="申请退款原因"/>
+
+    <EditText
+        android:id="@+id/ed_refund"
+        style="@style/TextLeft"
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_corners_12"
+        android:layout_height="200dp"
+        android:padding="20dp"
+        android:gravity="top"
+        android:layout_margin="16dp"
+        android:paddingLeft="8dp"
+        />
+    <Button
+        android:id="@+id/bt_confirm"
+        android:enabled="false"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        style="@style/ButtonStyle"
+        android:layout_marginTop="20dp"
+        android:text="确定"/>
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/bt_server"
+        android:background="#f5f6fa"
+        android:text="联系客服"
+        android:textColor="@color/font06a"
+        android:layout_width="match_parent"
+        android:layout_height="54dp" />
+</LinearLayout>

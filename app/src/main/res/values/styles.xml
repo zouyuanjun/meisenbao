@@ -1,0 +1,55 @@
+<resources xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">#00000000</item>
+    </style>
+
+    <style name="TextLeft">
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textColor">@color/font333</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="BGlinelayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/setting_height</item>
+        <item name="bgdividesize">0.5dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="showTopDiv">false</item>
+        <item name="android:layout_marginLeft">32dp</item>
+        <item name="bgdividecolor">@color/divline</item>
+    </style>
+    <style name="SettingText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/font333</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="Settingnext">
+        <item name="android:layout_width">7dp</item>
+        <item name="android:layout_height">14dp</item>
+        <item name="android:layout_marginRight">32dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@drawable/icon_arrow_right_lightgray</item>
+    </style>
+    <style name="titlebar">
+        <item name="titleColor">@color/font333</item>
+        <item name="rightColor">@color/font06a</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+<item name="android:id">@id/title</item>
+        <item name="android:background">@color/bg</item>
+        <item name="leftIcon">@drawable/icon_backward_blue</item>
+    </style>
+</resources>

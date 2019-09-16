@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_height="match_parent">
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:title="消息" />
+    <com.jxtk.mspay.utils.BGLinearlayout
+        android:id="@+id/bg_servermessage"
+        style="@style/BGlinelayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="服务通知"
+            android:textColor="@color/font2f"
+            android:textSize="16sp" />
+
+        <com.zou.fastlibrary.widget.ShapeCornerBgView
+            android:visibility="gone"
+            android:id="@+id/scb_severmessage_num"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:textColor="@color/white"
+            android:layout_marginRight="9dp"
+            app:appRadius="@dimen/space_32"/>
+
+        <ImageView
+          style="@style/Settingnext" />
+    </com.jxtk.mspay.utils.BGLinearlayout>
+    <com.jxtk.mspay.utils.BGLinearlayout
+        android:id="@+id/bg_sysmessage"
+        style="@style/BGlinelayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="系统通知"
+            android:textColor="@color/font2f"
+            android:textSize="16sp" />
+
+        <com.zou.fastlibrary.widget.ShapeCornerBgView
+            android:visibility="gone"
+            android:id="@+id/scb_settingmessage_num"
+            android:layout_width="20dp"
+            android:textColor="@color/white"
+            android:layout_height="20dp"
+            android:layout_marginRight="9dp"
+            app:appRadius="@dimen/space_32"/>
+
+        <ImageView
+            style="@style/Settingnext" />
+    </com.jxtk.mspay.utils.BGLinearlayout>
+    <com.jxtk.mspay.utils.BGLinearlayout
+        android:id="@+id/bg_accountmessage"
+        style="@style/BGlinelayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="账户通知"
+            android:textColor="@color/font2f"
+            android:textSize="16sp" />
+
+        <com.zou.fastlibrary.widget.ShapeCornerBgView
+            android:visibility="gone"
+            android:id="@+id/scb_accountmessage_num"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:textColor="@color/white"
+            android:layout_marginRight="9dp"
+            app:appRadius="@dimen/space_32"/>
+
+        <ImageView
+            style="@style/Settingnext" />
+    </com.jxtk.mspay.utils.BGLinearlayout>
+</LinearLayout>

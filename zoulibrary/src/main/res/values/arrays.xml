@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <declare-styleable name="LoopView" tools:ignore="ResourceName">
+        <attr name="lv_lineColor" format="color"/>
+        <attr name="lv_topBottomTextColor" format="color"/>
+        <attr name="lv_centerTextColor" format="color"/>
+        <attr name="lv_textSize" format="dimension"/>
+        <attr name="lv_canLoop" format="boolean"/>
+        <attr name="lv_initPosition" format="integer"/>
+        <attr name="lv_drawItemCount" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircularProgressDrawable" tools:ignore="ResourceName">
+        <attr name="cpd_padding" format="reference|dimension"/>
+        <attr name="cpd_initialAngle" format="reference|integer"/>
+        <attr name="cpd_maxSweepAngle" format="reference|integer"/>
+        <attr name="cpd_minSweepAngle" format="reference|integer"/>
+        <attr name="cpd_strokeSize" format="reference|dimension"/>
+        <attr name="cpd_strokeColor" format="reference|color"/>
+        <attr name="cpd_strokeSecondaryColor" format="reference|color"/>
+        <attr name="cpd_strokeColors" format="reference"/>
+        <attr name="cpd_reverse" format="boolean"/>
+        <attr name="cpd_rotateDuration" format="reference|integer"/>
+        <attr name="cpd_transformDuration" format="reference|integer"/>
+        <attr name="cpd_keepDuration" format="reference|integer"/>
+        <attr name="cpd_transformInterpolator" format="reference"/>
+        <attr name="cpd_inAnimDuration" format="reference|integer"/>
+        <attr name="cpd_outAnimDuration" format="reference|integer"/>
+        <attr name="cpd_inStepColors" format="reference"/>
+        <attr name="cpd_inStepPercent" format="float"/>
+        <attr name="pv_progressMode"/>
+    </declare-styleable>
+    <!-- 自定义验证码输入框-->
+    <declare-styleable name="vericationCodeView">
+        <!--输入框的数量-->
+        <attr name="vcv_et_number" format="integer" />
+        <!--输入类型-->
+        <attr name="vcv_et_inputType">
+            <enum name="number" value="0" />
+            <enum name="numberPassword" value="1" />
+            <enum name="text" value="2" />
+            <enum name="textPassword" value="3" />
+        </attr>
+        <!--输入框的宽度-->
+        <attr name="vcv_et_width" format="dimension|reference" />
+        <!--输入框的高度-->
+        <attr name="vcv_et_height" format="dimension|reference" />
+        <!--输入框文字颜色-->
+        <attr name="vcv_et_text_color" format="color|reference" />
+        <!--输入框文字大小-->
+        <attr name="vcv_et_text_size" format="dimension|reference" />
+        <!--输入框背景-->
+        <attr name="vcv_et_bg" format="reference" />
+        <!--光标样式-->
+        <attr name="vcv_et_cursor" format="reference" />
+    </declare-styleable>
+</resources>

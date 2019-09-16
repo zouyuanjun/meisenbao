@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:rightTitle="保存"
+        app:title="修改个人资料" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divline" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="头像"
+        android:textColor="@color/font333" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_formalbum"
+            android:layout_width="75dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_corners_5"
+            android:gravity="center"
+            android:text="相册"
+            android:textSize="12sp"
+            android:textColor="@color/font06a" />
+
+        <TextView
+            android:id="@+id/tv_formcamcra"
+            android:layout_width="75dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:background="@drawable/shape_corners_5"
+            android:gravity="center"
+            android:text="拍照"
+            android:textSize="12sp"
+            android:textColor="@color/font06a" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="昵称"
+        android:textColor="@color/font333" />
+
+    <EditText
+        android:id="@+id/ed_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/shape_corners_12"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="性别"
+        android:textColor="@color/font333" />
+
+    <com.jxtk.mspay.utils.BGLinearlayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/ll_men"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_corners_lan12"
+
+            android:textColor="@color/font999">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/tv_men"
+                android:background="@drawable/icon_form_selected_white" />
+
+            <TextView
+                android:id="@+id/tv_men"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:text="男"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_women"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:background="@drawable/shape_corners_12"
+            android:textColor="@color/font999">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/tv_women"
+                android:background="@drawable/icon_form_selected_white" />
+
+            <TextView
+                android:id="@+id/tv_women"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="女"
+                android:layout_centerInParent="true"
+                android:textColor="@color/font666" />
+        </RelativeLayout>
+    </com.jxtk.mspay.utils.BGLinearlayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:text="手机"
+        android:textColor="@color/font333" />
+
+    <TextView
+        android:id="@+id/tv_phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/shape_corners_12_miconbg"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp" />
+</LinearLayout>
