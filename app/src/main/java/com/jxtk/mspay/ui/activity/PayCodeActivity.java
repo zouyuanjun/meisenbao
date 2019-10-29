@@ -114,11 +114,13 @@ import okhttp3.WebSocket;
                     protected void onClose() {
                         super.onClose();
                         Log.d("关闭链接");
+                        showComplete();
                     }
 
                     @Override
                     public void onError(Throwable e) {
                         super.onError(e);
+                        showComplete();
                         Log.d("关闭链接" + e.toString());
                     }
                 });

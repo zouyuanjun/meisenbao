@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.zou.fastlibrary.utils.StringUtil;
 
 import org.json.JSONObject;
@@ -133,7 +134,7 @@ public class OnSuccessAndFaultSub extends DisposableObserver<ResponseBody>
                     mOnSuccessAndFaultListener.onFault("请重新登陆");
                 }else {
                     //                    ToastManager.showShortToast("请求失败");
-                    mOnSuccessAndFaultListener.onFault("请求失败");
+                    mOnSuccessAndFaultListener.onFault("请求失败"+e.getMessage());
                 }
             } else if (e instanceof UnknownHostException) {//域名解析失败
                 //                ToastManager.showShortToast("域名解析失败");
@@ -174,6 +175,7 @@ public class OnSuccessAndFaultSub extends DisposableObserver<ResponseBody>
 //            Log.e("sa",sa);
 
            final String result = body.string();
+      //      LogUtils.file(result);
         //    String result=body.string();
           //  Log.e("body", StringUtil.unicodeToUTF_8(result));
           //  Log.e("result", result);

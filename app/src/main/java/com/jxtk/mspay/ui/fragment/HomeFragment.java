@@ -117,9 +117,11 @@ import okhttp3.ResponseBody;
                 }
                 View onlyChild = nestedscrollview.getChildAt(0);
                 if (onlyChild.getHeight() <= scrollY + nestedscrollview.getHeight()) {   // 如果满足就是到底部了
-                    Log.d("滑到底了");
-                    llHide.setAlpha(1);
-                    clAction.setAlpha(0);
+                    if (scrollY > ScreenUtil.dip2px(MyApplication.getContext(), 40)) {
+                        llHide.setVisibility(View.VISIBLE);
+                        llHide.setAlpha(1);
+                        clAction.setAlpha(0);
+                    }
                 }
             }
         });

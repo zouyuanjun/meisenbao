@@ -26,7 +26,10 @@ import java.io.IOException;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+/*
+* 收钱码
+*
+* */
 public class RecycCodeActivity extends MyActivity {
     @BindView(R.id.im_paycode)
     ImageView imPaycode;

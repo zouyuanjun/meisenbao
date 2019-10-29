@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.jxtk.mspay.Constant;
 import com.jxtk.mspay.MainActivity;
 import com.jxtk.mspay.R;
@@ -53,8 +54,10 @@ public class WelcomeActivity extends MyActivity {
             btnGuideEnter.setVisibility(View.VISIBLE);
         }else if (Constant.TOKEN.equals(Constant.defValue)){
             //登陆页面
+          //  LogUtils.file("没有登陆过，登陆页面");
             startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
         }else {
+          //  LogUtils.file("登陆过，直接进入首页");
             startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
         }
 

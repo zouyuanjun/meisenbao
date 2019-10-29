@@ -26,9 +26,9 @@ public static String QRcode; //收款码
     public static int Remark_Requestcode = 2;
     public static int ScanCode = 1;
     public static int Remark_Backcode = 2;
-    public static String BASE_URL = "http://app.meisenpay.com/";
+    public static String BASE_URL = "http://www.meisenpay.com/";
     public static String TOKEN= DataKeeper.getStringKey(MyApplication.getContext(),"TOKEN_KEY");
-    public static String WEBSOCKET="ws://122.112.182.112:2347";
+    public static String WEBSOCKET="wss://www.meisenpay.com/wss";
     public static AddressBean addressBean;
     public static BankBean bankBean;
     public static String FIRST_OPEN="FIRST_OPEN";

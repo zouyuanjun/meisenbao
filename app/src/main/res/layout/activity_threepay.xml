@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.hjq.bar.TitleBar
+        style="@style/titlebar"
+        app:title="第三方商家支付" />
+
+    <ImageView
+        android:id="@+id/im_icon"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp">
+    </ImageView>
+    <TextView
+        android:id="@+id/tv_shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="美森宝售货机"
+        android:layout_gravity="center_horizontal"
+        android:textSize="14sp"
+        android:textColor="@color/font333"/>
+    <com.jxtk.mspay.utils.BGLinearlayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divline"
+        android:layout_margin="16dp" />
+    <com.zou.fastlibrary.widget.SettingBar
+        android:id="@+id/sb_paynum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_lineVisible="false"
+        app:bar_leftText="付款金额："/>
+    <com.zou.fastlibrary.widget.SettingBar
+        android:id="@+id/sb_ordernumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_lineVisible="false"
+        app:bar_leftText="商户订单号："/>
+    <com.zou.fastlibrary.widget.SettingBar
+        android:id="@+id/sb_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_lineVisible="false"
+        app:bar_leftText="商品说明："/>
+    <Button
+        android:enabled="false"
+        android:id="@+id/bt_confirm"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="确认支付"
+        android:layout_marginTop="20dp"
+        style="@style/ButtonStyle"/>
+</LinearLayout>

@@ -8,6 +8,7 @@ import com.jxtk.mspay.entity.UserInfoBean;
 import com.jxtk.mspay.netutils.HttpManage;
 import com.jxtk.mspay.netutils.OnSuccessAndFaultListener;
 import com.jxtk.mspay.netutils.OnSuccessAndFaultSub;
+import com.tencent.bugly.Bugly;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
 import com.zou.fastlibrary.image.ImageLoader;
@@ -32,6 +33,7 @@ import static com.jxtk.mspay.Constant.userInfoBean;
  *    time   : 2018/10/18
  *    desc   : 项目中的 Application 基类
  */
+
 public class MyApplication extends Application {
 private static Context context;
     @Override
@@ -49,7 +51,7 @@ private static Context context;
                 .setSkinStatusBarColorEnable(true)                     // 关闭状态栏换肤，默认打开[可选]
                 .setSkinWindowBackgroundEnable(true)                   // 关闭windowBackground换肤，默认打开[可选]
                 .loadSkin();
-        CrashReport.initCrashReport(getApplicationContext(), "80585cdc29", false);
+        Bugly.init(getApplicationContext(), "80585cdc29", false);
         Constant.TOKEN= DataKeeper.getStringKey(MyApplication.getContext(),"TOKEN_KEY");
         if (null!=Constant.TOKEN&&!Constant.TOKEN.equals("defValue")){
             Observable<ResponseBody> observable = HttpManage.getInstance().getHttpApi().getUserInfo(Constant.TOKEN);

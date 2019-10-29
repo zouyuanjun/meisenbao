@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 
+import com.blankj.utilcode.util.KeyboardUtils;
 import com.jxtk.mspay.Constant;
 import com.jxtk.mspay.R;
 import com.jxtk.mspay.common.MyActivity;
 import com.jxtk.mspay.netutils.HttpManage;
 import com.jxtk.mspay.netutils.OnSuccessAndFaultListener;
 import com.jxtk.mspay.netutils.OnSuccessAndFaultSub;
+import com.zou.fastlibrary.utils.EditTextUtil;
 import com.zou.fastlibrary.utils.Log;
 import com.zou.fastlibrary.widget.CountdownView;
 import com.zou.fastlibrary.widget.VerificationCodeView;
@@ -30,7 +32,7 @@ public class VerifyPhoneActivity extends MyActivity {
     VerificationCodeView verificationcodeview;
     @BindView(R.id.cl_code)
     ConstraintLayout clCode;
-int source=0;
+    int source=0;
     @Override
     protected int getLayoutId() {
         return R.layout.activity_verify;
@@ -46,6 +48,8 @@ int source=0;
         sengcode.performClick();
         source=getIntent().getIntExtra(Constant.Intent_TAG,0);
         Log.d("VerifyPhoneActivity初始化");
+        verificationcodeview.getEditText1().requestFocus();
+
     }
 
     @Override
@@ -100,16 +104,19 @@ int source=0;
             @Override
             public void onSuccess(String result) {
                 Log.d(result);
+                KeyboardUtils.showSoftInput();
 
             }
 
             @Override
             public void onFault(String errorMsg) {
                 showComplete();
+                sengcode.resetState();
                 if (errorMsg.equals("请重新登陆")) {
                     startActivity(LoginActivity.class);
                 }
                 toast(errorMsg);
+                KeyboardUtils.showSoftInput();
             }
         }));
     }

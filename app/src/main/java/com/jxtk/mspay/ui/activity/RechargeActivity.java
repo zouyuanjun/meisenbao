@@ -19,7 +19,6 @@ import com.jxtk.mspay.Constant;
 import com.jxtk.mspay.R;
 import com.jxtk.mspay.adapter.ChargeAdapter;
 import com.jxtk.mspay.common.MyActivity;
-import com.jxtk.mspay.demo.util.OrderInfoUtil2_0;
 import com.jxtk.mspay.entity.ChargeMEntity;
 import com.jxtk.mspay.entity.PayResult;
 import com.jxtk.mspay.netutils.HttpManage;
@@ -81,6 +80,7 @@ import okhttp3.ResponseBody;
 
     @SuppressLint("HandlerLeak")
     private Handler mHandler = new Handler() {
+        @Override
         @SuppressWarnings("unused")
         public void handleMessage(Message msg) {
             switch (msg.what) {
@@ -194,18 +194,7 @@ import okhttp3.ResponseBody;
     public boolean statusBarDarkFont() {
         return true;
     }
- //String getS4="method=alipay.trade.app.pay&app_id=2019082266406350&charset=utf-8&sign_type=RSA2&version=1.0&timestamp=2019-08-29+17%3A19%3A38&notify_url=https%3A%2F%2Fwww.alipay.com&biz_content=%7B%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22total_amount%22%3A%220.08%22%2C%22subject%22%3A%22%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98%22%2C%22body%22%3A%22%22%2C%22out_trade_no%22%3A%221567070378%22%7D&sign=SQBc2vG8n8MNOaelJDsdtDUiV%2BxKR2n5bcgJLMWOCDQkfVBpF%2FHpQN6v0LIL7Yk2Ghd60UEr8CrCNL9AYtrtXktsj8865x5ElkXwlgyvvwvnBoiTE1kpOTaKuaVsLQMZH4qhiDsf1F2yZFSOF3IuhcrQAGvn1N2hT4XJLc%2BAT8ZTZZqykmL%2FNLZJYN0Abqpu%2F93FvgCugZ5PMQyFSBxWHdjNRg7MuIEq6Es25yhjaG%2FVgOIoKqKkaX8TQaWUqaMsBf5UyXXf4Uta8a%2F94TFfo%2FWKl2udPP3ry6K78aQDp2ecVtXKyN5S5EFW%2FWbnC38hBihDuInGVxlcFycsWJu1jA%3D%3D";
- // String getS4="method=alipay.trade.app.pay&app_id=2019082266406350&charset=utf-8&sign_type=RSA2&version=1.0&timestamp=2019-08-29+17%3A24%3A23&notify_url=https%3A%2F%2Fwww.alipay.com&biz_content=%7B%22passback_params%22%3A%22%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22total_amount%22%3A1%2C%22subject%22%3A%22%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98%22%2C%22body%22%3A%22%22%2C%22out_trade_no%22%3A%221567070663%22%7D&sign=H14pxzVuplOxocqpDdR%2BmcXo9HWFopKEoJduTzd88fXmFSSN2sxqTMSiLOwZi75sOmo0OB9wC8NBiw1tr0ofqbLHBReuRWfMz18%2BTyXOMW27s4%2FF4lBE3iO8sekXZuQtnpjjRJQB5EdXfj0wwu%2FzZv8gK8MO5XEfCKOqRRtsrhDBkvQtESeu7P7ukHB%2FBaxZNwAXhIilCP6Q9ySE3tj00l5Mw71zrrflHPbUBgN5htkT0oGQ4REeellWIUhsgnFy1NRd59iTXZW6LpLvWT9u5Yx3WVGkXPBK37FXysS4xLkQfVQCi%2BQcG3nRX4uxtUaZlqeL%2FZ3TTbPhXWnQj9TUjw%3D%3D";
- //  String getS4="method=alipay.trade.app.pay&app_id=2019082266406350&charset=utf-8&sign_type=RSA2&version=1.0&timestamp=2019-08-29+17%3A29%3A29&return_url=&notify_url=https%3A%2F%2Fwww.alipay.com&biz_content=%7B%22passback_params%22%3A%22%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22total_amount%22%3A1%2C%22subject%22%3A%22%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98%22%2C%22body%22%3A%22%22%2C%22out_trade_no%22%3A%221567070969%22%7D&sign=UK58IXaBVQo4nE1E%2BcA6jC7nREX5jx3gLN%2B7SSLe%2FJG8zSp8KBcFtIzQvRMkgduy8N5x3icDtBUibYKWt%2FBX1P7L0Z7oKUDpxn96V0cZeeLW2cmALUqjTNfs7co7mqog30IsldSJ4pYdDDUGPKQx2rc8GupawNrNVcoNhLRPye2mJQrbU58FbgPegQqa81%2BxalHfxDCExmdxZoZvesKGDGTZN%2FJQ3mQ79crSr0jMA8AR7yGExN43UgnT8NXlwflgFtogWpSo8kWl2LxAPcTLqkxJdOMs9eeIiZGa4xHsJ286LY7UI7xk3STjEKsU%2FUJQi251WmSSKF1zu0z1OuMk0w%3D%3D";
-   String getS4="method=alipay.trade.app.pay&app_id=2019082266406350&format=JSON&charset=UTF-8&sign_type=RSA2&version=1.0&timestamp=2019-08-29+17%3A33%3A51&notify_url=https%3A%2F%2Fwww.alipay.com&biz_content=%7B%22subject%22%3A%22%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98%22%2C%22body%22%3A%22%22%2C%22out_trade_no%22%3A%221567071231%22%2C%22total_amount%22%3A9%2C%22passback_params%22%3A%22%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%7D&sign=blZap%2FICgZMHhatYSl1bR476Ibm0zlfsJxjeJK91uDP4gQd1vemc2ibLDddp7FeWOxwAkS%2F0Y3Wk37rHes34UiTNsH53RLPzHug5o%2FgIx6mTeogtl2HiaJIYUBpYWEih2Rw9x9ZtmkRQzEdn%2BWO7bSxhShaIDIx3yiLQ%2FS2%2BjyG2mwMJ6H%2FJEdt%2BnL4rX4zHmadL8z5iIxTR1lOsLEJqcM%2Fj4yaA787Fq%2B0wkuOSd%2BJEuayzxRdLTBFcQoYEDptWBcCeAAssL9QgIbrbPNtK5yrk5YV95bpvKaXct3GyL9F9i8SNMdg5UcJMRVosWECQpoye9oJhDiGV4qC6rSPS0g%3D%3D";
-    private void pay(String string) {
-        boolean rsa2 = (RSA2_PRIVATE.length() > 0);
-        Map<String, String> params = OrderInfoUtil2_0.buildOrderParamMap(APPID, rsa2);
-        String orderParam = OrderInfoUtil2_0.buildOrderParam(params);
-
-        String privateKey = rsa2 ? RSA2_PRIVATE : RSA_PRIVATE;
-        String sign = OrderInfoUtil2_0.getSign(params, privateKey, rsa2);
-        final String orderInfo = orderParam + "&" + sign;
+     private void pay(String string) {
 
         final Runnable payRunnable = new Runnable() {
             @Override

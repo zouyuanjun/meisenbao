@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.hjq.bar.TitleBar;
 import com.hjq.permissions.OnPermission;
 import com.hjq.permissions.Permission;
@@ -53,12 +54,13 @@ import okhttp3.ResponseBody;
 
 import static com.jxtk.mspay.common.MyApplication.getContext;
 
-/*
+/**
  * @author 棉发糖
  * @emil zouyuanjun@qq.com
  * create  2019/8/8 0008
  * description:
- */public class PayActivity extends MyActivity {
+ **/
+public class PayActivity extends MyActivity {
     @BindView(R.id.ed_paynum)
     EditText edPaynum;
     @BindView(R.id.Keyboard)
@@ -82,11 +84,16 @@ import static com.jxtk.mspay.common.MyApplication.getContext;
     @BindView(R.id.tv_remark)
     TextView tvRemark;
     private EditTextInputHelper mEditTextInputHelper;
-    CancellationSignal cancellationSignal = new CancellationSignal();//取消的对象
+    /**
+     * 取消的对象
+     **/
+    CancellationSignal cancellationSignal = new CancellationSignal();
     BaseDialog dialog;
+    //扫码内容
+    String codeurl;
+    //备注
+    String remark = "";
 
-    String codeurl;  //扫码内容
-    String remark = ""; //备注
     String user_id;
     boolean isscan = true;//是买单还是扫码
     String nickname;
@@ -179,7 +186,7 @@ import static com.jxtk.mspay.common.MyApplication.getContext;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
-    @OnClick({R.id.tv_addremark, R.id.bt_confirm,R.id.tv_updataremark})
+    @OnClick({R.id.tv_addremark, R.id.bt_confirm, R.id.tv_updataremark})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_addremark:
@@ -191,52 +198,59 @@ import static com.jxtk.mspay.common.MyApplication.getContext;
                 break;
             case R.id.tv_updataremark:
                 Intent intent2 = new Intent(getBaseContext(), RemarkActivity.class);
-                intent2.putExtra(Constant.Intent_TAG,remark);
+                intent2.putExtra(Constant.Intent_TAG, remark);
                 startActivityForResult(intent2, Constant.Remark_Requestcode);
+                break;
+            default:
                 break;
         }
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == Constant.ScanCode && resultCode == RESULT_OK && null != data) {
             codeurl = data.getStringExtra("result_string");
             if (null != codeurl) {
-                loadinfo(codeurl);
+                int index = codeurl.indexOf("receive_pay");
+                if (index > 0) {
+                    loadinfo(codeurl);
+                }
+                int index2 = codeurl.indexOf("trade_no");
+                if (index2 > 0) {
+                    Intent intent=new Intent(PayActivity.this,PayThreeActivity.class);
+                    intent.putExtra(Constant.Intent_TAG,codeurl);
+                    startActivity(intent);
+                    finish();
+                }
+
             } else {
                 toast("扫码失败");
                 finish();
             }
-
-            Log.d(codeurl);
+            LogUtils.d(codeurl);
         } else if (requestCode == Constant.Remark_Requestcode && resultCode == Constant.Remark_Backcode) {
             if (null != data) {
                 remark = data.getStringExtra(Constant.Intent_TAG);
-                if (!StringUtil.isEmpty(remark)){
+                if (!StringUtil.isEmpty(remark)) {
                     tvRemark.setText(remark);
                     tvRemark.setVisibility(View.VISIBLE);
                     llRemark.setVisibility(View.VISIBLE);
                     tvAddremark.setVisibility(View.GONE);
-                }else {
+                } else {
                     tvRemark.setVisibility(View.GONE);
                     llRemark.setVisibility(View.GONE);
                     tvAddremark.setVisibility(View.VISIBLE);
                 }
             }
 
-        }else {
+        } else {
             finish();
         }
 
     }
 
     private void loadinfo(String url) {
-        int index = url.indexOf("receive_pay");
-        if (index <= 0) {
-            toast("该会员没有收款权限");
-            finish();
-            return;
-        }
         Map<String, String> map = new HashMap<>();
         map.put("token", Constant.TOKEN);
         map.put("url", url);
@@ -334,7 +348,6 @@ import static com.jxtk.mspay.common.MyApplication.getContext;
         }
         return true;
     }
-
 
 
     private class MyFingerDiscentListener extends FingerprintManagerCompat.AuthenticationCallback {

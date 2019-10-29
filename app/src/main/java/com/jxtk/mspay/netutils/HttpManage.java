@@ -3,6 +3,8 @@ package com.jxtk.mspay.netutils;
 
 import android.content.Context;
 
+import com.blankj.utilcode.util.LogUtils;
+import com.jxtk.mspay.Constant;
 import com.jxtk.mspay.common.MyApplication;
 import com.zou.fastlibrary.utils.DataKeeper;
 import com.zou.fastlibrary.utils.Log;
@@ -16,7 +18,6 @@ import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
-import me.jessyan.autosize.utils.LogUtils;
 import okhttp3.Cache;
 import okhttp3.CacheControl;
 import okhttp3.Interceptor;
@@ -35,7 +36,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class HttpManage {
     public String TAG = "HttpMethods";
     public static final String CACHE_NAME = "meisenbao";
-    public static String BASE_URL = "http://app.meisenpay.com";
+    public static String BASE_URL = Constant.BASE_URL;
     private static final int DEFAULT_CONNECT_TIMEOUT = 10;
     private static final int DEFAULT_WRITE_TIMEOUT = 10;
     private static final int DEFAULT_READ_TIMEOUT = 10;
@@ -111,12 +112,13 @@ public class HttpManage {
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
             public void log(String message) {
-                Log.d(message);
+             //   LogUtils.file(message);
+                LogUtils.d(message);
             }
 
 
         });
-        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
         //设置 Debug Log 模式
         okHttpBuilder.addInterceptor(loggingInterceptor);
 //        }

@@ -150,12 +150,12 @@ import static com.jxtk.mspay.utils.TagAliasOperatorHelper.sequence;
 
     public boolean supportFingerprint() {
         if (Build.VERSION.SDK_INT < 23) {
-            Toast.makeText(this, "您的系统版本过低，不支持指纹功能", Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(this, "您的系统版本过低，不支持指纹功能", Toast.LENGTH_SHORT).show();
             return false;
         } else {
             KeyguardManager keyguardManager = getSystemService(KeyguardManager.class);
             FingerprintManager fingerprintManager = getSystemService(FingerprintManager.class);
-            if (!fingerprintManager.isHardwareDetected()) {
+            if (null==fingerprintManager||!fingerprintManager.isHardwareDetected()) {
               //  Toast.makeText(this, "您的手机不支持指纹功能", Toast.LENGTH_SHORT).show();
                 return false;
             } else if (!keyguardManager.isKeyguardSecure()) {

@@ -82,10 +82,10 @@
 
     <LinearLayout
         android:id="@+id/ll_remark"
-        android:visibility="gone"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_height="wrap_content">
+        android:visibility="gone">
 
         <TextView
             android:layout_width="wrap_content"
@@ -107,19 +107,20 @@
             android:text="修改备注"
             android:textColor="@color/font06a" />
     </LinearLayout>
-<TextView
-    android:id="@+id/tv_remark"
-    android:visibility="gone"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:maxLines="7"
-    android:textColor="@color/font333"
-    android:textSize="14sp"
-    android:background="@drawable/shape_corners_12"
-    android:padding="16dp"
-    android:text=""
-    android:lineSpacingExtra="2dp"
-    android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/shape_corners_12"
+        android:lineSpacingExtra="2dp"
+        android:maxLines="7"
+        android:padding="16dp"
+        android:text=""
+        android:textColor="@color/font333"
+        android:textSize="14sp"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/bt_confirm"

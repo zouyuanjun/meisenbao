@@ -180,7 +180,6 @@ public class BillListActivity extends MyActivity {
                         monthBillAdapter.notifyDataSetChanged();
                         smartrefresh.finishRefresh();
                         smartrefresh.finishLoadMore();
-                        return;
                     } else{  //刷新
                         smartrefresh.finishRefresh();
                         smartrefresh.finishLoadMoreWithNoMoreData();

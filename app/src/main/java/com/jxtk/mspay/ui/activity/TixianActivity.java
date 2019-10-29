@@ -208,11 +208,12 @@ public class TixianActivity extends MyActivity {
         } else {
             llBank.setVisibility(View.GONE);
             constraintLayout.setVisibility(View.VISIBLE);
+            tvBankname.setText(bankBean.getBank());
+            tvUsername.setText(bankBean.getRealname());
+            tvCardnumber.setText(bankBean.getAccount().substring(bankBean.getAccount().length() - 4, bankBean.getAccount().length()));
         }
 
-        tvBankname.setText(bankBean.getBank());
-        tvUsername.setText(bankBean.getRealname());
-        tvCardnumber.setText(bankBean.getAccount().substring(bankBean.getAccount().length() - 4, bankBean.getAccount().length()));
+
 
     }
 

@@ -9,6 +9,7 @@ import android.support.annotation.StringRes;
 import android.util.Log;
 import android.view.View;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.hjq.bar.OnTitleBarListener;
 import com.hjq.bar.TitleBar;
@@ -32,6 +33,7 @@ public abstract class MyActivity extends UIActivity
     @Override
     protected void initActivity() {
         super.initActivity();
+    //    LogUtils.file(this.getClass().getName()+"》》》》》启动");
         ActivityStackManager.getInstance().onActivityCreated(this);
     }
 
@@ -133,6 +135,7 @@ public abstract class MyActivity extends UIActivity
     @Override
     protected void onPause() {
         super.onPause();
+      //  LogUtils.file(this.getClass().getName()+"》》》》》暂停");
     }
 
     @Override

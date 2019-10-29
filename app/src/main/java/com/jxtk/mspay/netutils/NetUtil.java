@@ -17,6 +17,7 @@ public class NetUtil {
      *
      * @return
      */
+
     public static boolean isNetworkConnected(Context context) {
 
         ConnectivityManager mConnectivityManager = (ConnectivityManager) context

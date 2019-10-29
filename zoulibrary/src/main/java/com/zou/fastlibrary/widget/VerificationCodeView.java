@@ -162,11 +162,23 @@ public class VerificationCodeView extends LinearLayout implements TextWatcher, V
         typedArray.recycle();
         initView();
     }
+EditText editText1;
+
+    public EditText getEditText1() {
+        return editText1;
+    }
+
+    public void setEditText1(EditText editText1) {
+        this.editText1 = editText1;
+    }
 
     @SuppressLint("ResourceAsColor")
     private void initView() {
         for (int i = 0; i < mEtNumber; i++) {
             EditText editText = new EditText(mContext);
+            if (null==editText1){
+                editText1=editText;
+            }
             initEditText(editText, i);
             addView(editText);
             if (i == 0) {

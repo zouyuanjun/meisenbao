@@ -14,6 +14,7 @@ import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 import retrofit2.http.Query;
+import retrofit2.http.QueryMap;
 import retrofit2.http.Streaming;
 import retrofit2.http.Url;
 
@@ -140,7 +141,12 @@ public interface HttpApi {
     @POST("/api/money/pay_view")
     @FormUrlEncoded
     Observable<ResponseBody> getCodeInfo(@FieldMap Map<String, String> map);
-    //扫码获取信息
+
+
+    //扫码获取第三方信息
+    @POST("/mpay")
+    Observable<ResponseBody> getThreeCodeInfo(@QueryMap Map<String, String> map);
+
     @POST("/api/message/setRead")
     @FormUrlEncoded
     Observable<ResponseBody> setRead(@FieldMap Map<String, String> map);
