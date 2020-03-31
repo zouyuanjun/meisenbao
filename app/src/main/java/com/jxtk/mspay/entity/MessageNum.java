@@ -50,4 +50,14 @@ package com.jxtk.mspay.entity;
     public void setAll(int all) {
         this.all = all;
     }
+
+    @Override
+    public String toString() {
+        return "MessageNum{" +
+                "service=" + service +
+                ", account=" + account +
+                ", system=" + system +
+                ", all=" + all +
+                '}';
+    }
 }

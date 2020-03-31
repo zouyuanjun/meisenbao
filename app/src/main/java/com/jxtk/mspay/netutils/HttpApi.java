@@ -1,5 +1,8 @@
 package com.jxtk.mspay.netutils;
 
+import com.jxtk.mspay.entity.MessageNum;
+import com.jxtk.mspay.entity.ResultBean;
+
 import java.util.Map;
 
 import io.reactivex.Observable;
@@ -7,6 +10,7 @@ import io.reactivex.annotations.NonNull;
 import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.Response;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -112,6 +116,12 @@ public interface HttpApi {
     //获取未读消息数目
     @POST("/api/message/count")
     Observable<ResponseBody> getMessage(@Query("token") String token);
+
+    //获取未读消息数目
+    @POST("/api/message/count")
+    Observable<ResultBean<MessageNum>> getMessage2(@Query("token") String token);
+
+
 
     //获取消息列表
     @POST("/api/message/gets")

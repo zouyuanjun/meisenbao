@@ -9,6 +9,7 @@ import com.jxtk.mspay.MainActivity;
 import com.jxtk.mspay.R;
 import com.jxtk.mspay.common.MyActivity;
 import com.jxtk.mspay.entity.MessageNum;
+import com.jxtk.mspay.entity.ResultBean;
 import com.jxtk.mspay.entity.UserInfoBean;
 import com.jxtk.mspay.netutils.HttpManage;
 import com.jxtk.mspay.netutils.OnSuccessAndFaultListener;
@@ -25,7 +26,15 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.reactivex.Observable;
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 import okhttp3.ResponseBody;
+import rx.Scheduler;
+import rx.functions.Action;
+import rx.functions.Action1;
 
 import static com.jxtk.mspay.Constant.messageNum;
 import static com.jxtk.mspay.Constant.userInfoBean;
@@ -34,7 +43,7 @@ import static com.jxtk.mspay.Constant.userInfoBean;
  * @author 棉发糖
  * @emil zouyuanjun@qq.com
  * create  2019/8/7 0007
- * description:
+ * description: 消息中心
  */public class MessageCenterActivity extends MyActivity {
     @BindView(R.id.scb_severmessage_num)
     ShapeCornerBgView scbSevermessageNum;
@@ -55,7 +64,7 @@ import static com.jxtk.mspay.Constant.userInfoBean;
 
     @Override
     protected void initView() {
-Log.d("MessageCenterActivity启动");
+        Log.d("MessageCenterActivity启动");
     }
 
     @Override
@@ -86,7 +95,7 @@ Log.d("MessageCenterActivity启动");
             scbAccountmessageNum.setVisibility(View.GONE);
 
         }
-        if (null==messageNum){
+        if (null == messageNum) {
             Observable<ResponseBody> observable = HttpManage.getInstance().getHttpApi().getUserInfo(Constant.TOKEN);
             HttpManage.getInstance().toSubscribe(observable, new OnSuccessAndFaultSub(new OnSuccessAndFaultListener() {
                 @Override
@@ -102,32 +111,42 @@ Log.d("MessageCenterActivity启动");
                     toast(errorMsg);
                 }
             }));
-            Observable<ResponseBody> observable2 = HttpManage.getInstance().getHttpApi().getMessage(Constant.TOKEN);
-            HttpManage.getInstance().toSubscribe(observable2, new OnSuccessAndFaultSub(new OnSuccessAndFaultListener() {
-                @Override
-                public void onSuccess(String result) {
-                    Log.d(result);
-                    messageNum = JsonUtils.stringToObject(result, MessageNum.class);
-                    initData();
-                    showComplete();
-                }
+//            Observable<ResponseBody> observable2 = HttpManage.getInstance().getHttpApi().getMessage(Constant.TOKEN);
+//            HttpManage.getInstance().toSubscribe(observable2, new OnSuccessAndFaultSub(new OnSuccessAndFaultListener() {
+//                @Override
+//                public void onSuccess(String result) {
+//                    Log.d(result);
+//                    messageNum = JsonUtils.stringToObject(result, MessageNum.class);
+//                    initData();
+//                    showComplete();
+//                }
+//
+//                @Override
+//                public void onFault(String errorMsg) {
+//                    if (errorMsg.equals("请重新登陆")) {
+//                        startActivity(LoginActivity.class);
+//                    }
+//                    showComplete();
+//                    toast(errorMsg);
+//                }
+//            }));
 
-                @Override
-                public void onFault(String errorMsg) {
-                    if (errorMsg.equals("请重新登陆")) {
-                        startActivity(LoginActivity.class);
-                    }
-                    showComplete();
-                    toast(errorMsg);
-                }
-            }));
+
         }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        Observable<ResultBean<MessageNum>> observable1 = HttpManage.getInstance().getHttpApi().getMessage2(Constant.TOKEN);
+        observable1.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<ResultBean<MessageNum>>() {
+                    @Override
+                    public void accept(ResultBean<MessageNum> messageNumResultBean) throws Exception {
 
+                    }
+                });
 
     }
 
@@ -185,8 +204,8 @@ Log.d("MessageCenterActivity启动");
 
     @Override
     public void onBackPressed() {
-Log.d("MessageCenterActivity的栈"+MessageCenterActivity.this.getTaskId());
-        if (ActivityStackManager.getInstance().mActivitySet.keySet().size()==1) {
+        Log.d("MessageCenterActivity的栈" + MessageCenterActivity.this.getTaskId());
+        if (ActivityStackManager.getInstance().mActivitySet.keySet().size() == 1) {
             startActivity(MainActivity.class);
             Log.d("ActivityStackManager返回了");
         } else {
